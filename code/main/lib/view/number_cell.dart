@@ -27,7 +27,7 @@ class NumberCell extends StatelessWidget {
           child: Text(
             number ?? "",
             style: const TextStyle(
-              fontSize: 25,
+              fontSize: 40,
             ),
           ),
         ));

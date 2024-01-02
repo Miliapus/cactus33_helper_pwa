@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class KeyBoard extends StatelessWidget {
   const KeyBoard(
-      {super.key, required this.onNumberTap,
+      {super.key,
+      required this.onNumberTap,
       this.absorbing = false,
       this.forbid = const {},
       this.unSuggest = const {}});
@@ -25,10 +26,20 @@ class KeyBoard extends StatelessWidget {
                 ? Colors.grey.withAlpha(50)
                 : Colors.greenAccent;
           }),
-          minimumSize:
-              MaterialStateProperty.all(const Size(double.infinity, double.infinity)),
+          minimumSize: MaterialStateProperty.all(
+              const Size(double.infinity, double.infinity)),
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
         ),
-        child: Text(number.toString()),
+        child: Text(
+          number.toString(),
+          style: const TextStyle(
+            fontSize: 25.0,
+          ),
+        ),
       ),
     );
   }

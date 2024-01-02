@@ -55,7 +55,8 @@ class MyHomePageState extends State<MyHomePage> {
           title: const Text("仙人彩经"),
         ),
         body: PrepareWidget(
-          loading: const Center(child: Text("loading",selectionColor: Colors.black)),
+          loading: const Center(
+              child: Text("loading", selectionColor: Colors.black)),
           builder: (BuildContext context) async {
             await load();
             return StatefulBuilder(builder: realBody);
@@ -71,6 +72,9 @@ class MyHomePageState extends State<MyHomePage> {
                 info[selected!] == unKnownNumber
             ? info.numbersUnknown.toSet()
             : <int>{};
+    const clearStyle = TextStyle(
+      fontSize: 20,
+    );
     return Center(
       child: Column(
         children: [
@@ -84,14 +88,30 @@ class MyHomePageState extends State<MyHomePage> {
             child: Row(
               children: [
                 Expanded(
-                    child: TextButton(
-                        onPressed: () => setState(() => mapController.clear()),
-                        child: const Text("全部重置"))),
+                  child: TextButton(
+                    onPressed: () => setState(() => mapController.clear()),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        "全部重置",
+                        style: clearStyle,
+                      ),
+                    ),
+                  ),
+                ),
                 Expanded(
-                    child: TextButton(
-                        onPressed: () =>
-                            setState(() => mapController.update(unKnownNumber)),
-                        child: const Text("重置")))
+                  child: TextButton(
+                    onPressed: () =>
+                        setState(() => mapController.update(unKnownNumber)),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        "重置",
+                        style: clearStyle,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -100,15 +120,16 @@ class MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.only(bottom: 10),
               child: Card(
                 child: Padding(
-                    padding: const EdgeInsets.all(10),
-                      child: KeyBoard(
-                        absorbing: keyBoardAbsorbing,
-                        onNumberTap: (number) {
-                          mapController.update(number);
-                          mapController.selected = mapController.nextPosition;
-                        },
-                        forbid: forbid,
-                      ),),
+                  padding: const EdgeInsets.all(10),
+                  child: KeyBoard(
+                    absorbing: keyBoardAbsorbing,
+                    onNumberTap: (number) {
+                      mapController.update(number);
+                      mapController.selected = mapController.nextPosition;
+                    },
+                    forbid: forbid,
+                  ),
+                ),
               ),
             ),
           )

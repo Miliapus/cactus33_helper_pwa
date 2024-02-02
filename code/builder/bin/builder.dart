@@ -19,7 +19,7 @@ void delete() {
 
 Future<void> build() async {
   final cmd =
-      "flutter build web --base-href  /$repository/ --web-renderer canvaskit -o $target --dart-define=\"buildDate=${DateTime.now().millisecondsSinceEpoch}\"";
+      "flutter build web --no-web-resources-cdn --base-href  /$repository/ --web-renderer canvaskit -o $target --dart-define=\"buildDate=${DateTime.now().millisecondsSinceEpoch}\"";
   var shell = Shell(workingDirectory: "../main");
   await shell.run(cmd);
 }

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import '../logic/points_info.dart';
 import '../view/keyboard.dart';

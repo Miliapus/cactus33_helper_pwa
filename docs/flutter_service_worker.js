@@ -3,33 +3,30 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "703a33b12bb587113bacc5411702f5ba",
-"assets/AssetManifest.bin.json": "545de7e5764388c86880cc47cdd64d8a",
+const RESOURCES = {"version.json": "f8ef70a3644eec244f04e33ce9f2faa6",
+"index.html": "8747d3eeef7fdec6abe9470fc61ddc72",
+"/": "8747d3eeef7fdec6abe9470fc61ddc72",
+"main.dart.js": "fe29a4b800c71485caf5b579bb8d8f4d",
+"flutter.js": "7d69e653079438abfbb24b82a655b0a4",
+"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"icons/cactus33-192.png": "b29199208ebf7543c893a52dc9528b48",
+"manifest.json": "2f471a482602291d89c391a7f219fb11",
 "assets/AssetManifest.json": "a7ad4438c2eeaad5c4008703670164c8",
-"assets/data.bin": "018e3d153653e9f959edac4b99bb4768",
+"assets/NOTICES": "5e04fc13c4a86743effc4cd630bd14c1",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "32fce58e2acb9c420eab0fe7b828b761",
-"assets/NOTICES": "2ff7ff237c3907763389951c7b4e3074",
+"assets/AssetManifest.bin.json": "545de7e5764388c86880cc47cdd64d8a",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "89ed8f4e49bcdfc0b5bfc9b24591e347",
 "assets/shaders/ink_sparkle.frag": "4096b5150bac93c41cbc9b45276bd90f",
-"assets/web.config": "fd46e46974b04d1bec270cfa233fb389",
-"canvaskit/canvaskit.js": "eb8797020acdbdf96a12fb0405582c1b",
-"canvaskit/canvaskit.wasm": "73584c1a3367e3eaf757647a8f5c5989",
-"canvaskit/chromium/canvaskit.js": "0ae8bbcc58155679458a0f7a00f66873",
-"canvaskit/chromium/canvaskit.wasm": "143af6ff368f9cd21c863bfa4274c406",
+"assets/AssetManifest.bin": "703a33b12bb587113bacc5411702f5ba",
+"assets/fonts/MaterialIcons-Regular.otf": "32fce58e2acb9c420eab0fe7b828b761",
+"assets/data.bin": "018e3d153653e9f959edac4b99bb4768",
 "canvaskit/skwasm.js": "87063acf45c5e1ab9565dcf06b0c18b8",
 "canvaskit/skwasm.wasm": "2fc47c0a0c3c7af8542b601634fe9674",
-"canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03",
-"data.mime": "018e3d153653e9f959edac4b99bb4768",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"flutter.js": "59a12ab9d00ae8f8096fffc417b6e84f",
-"icons/cactus33-192.png": "b29199208ebf7543c893a52dc9528b48",
-"index.html": "0088ce3d31fffd29c5653e81b93164f5",
-"/": "0088ce3d31fffd29c5653e81b93164f5",
-"main.dart.js": "9ec8322a08d8e815ecf130f66a1c0c4c",
-"manifest.json": "41b54bcd688690557fb48123322181ee",
-"version.json": "f8ef70a3644eec244f04e33ce9f2faa6",
-"web.config": "77f5b3361a7ef564c0fcd61c3c3bcee9"};
+"canvaskit/chromium/canvaskit.js": "0ae8bbcc58155679458a0f7a00f66873",
+"canvaskit/chromium/canvaskit.wasm": "143af6ff368f9cd21c863bfa4274c406",
+"canvaskit/canvaskit.js": "eb8797020acdbdf96a12fb0405582c1b",
+"canvaskit/canvaskit.wasm": "73584c1a3367e3eaf757647a8f5c5989",
+"canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
@@ -119,12 +116,13 @@ self.addEventListener("fetch", (event) => {
   if (key.indexOf('?v=') != -1) {
     key = key.split('?v=')[0];
   }
-  if (event.request.url == origin || event.request.url.startsWith(origin + '/#') || key == '') {
+  if (event.request.url == origin || event.request.url.startsWith(origin + '/#') || key == '' || key == "cactus33_helper_pwa/") {
     key = '/';
   }
   // If the URL is not the RESOURCE list then return to signal that the
   // browser should take over.
-  if (!RESOURCES[key]) {
+  var resKey = key.replace("cactus33_helper_pwa/", "");
+if (!RESOURCES[resKey]) {
     return;
   }
   // If the URL is the index.html, perform an online-first request.

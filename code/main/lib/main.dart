@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import '../logic/points_info.dart';
 import '../view/keyboard.dart';
@@ -52,8 +54,18 @@ class MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("仙人彩经"),
-        ),
+            title: GestureDetector(
+          child: const Text("仙人彩经"),
+          onTap: () {
+            const buildDatetring = String.fromEnvironment("buildDate");
+            final buildDate =
+                buildDatetring == "" ? 0 : int.parse(buildDatetring);
+            final date =
+                DateTime.fromMillisecondsSinceEpoch(buildDate).toString();
+            var snackBar = SnackBar(content: Text('Build Date : $date'));
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          },
+        )),
         body: PrepareWidget(
           loading: const Center(
               child: Text("loading", selectionColor: Colors.black)),

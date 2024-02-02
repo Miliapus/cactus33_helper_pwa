@@ -19204,7 +19204,7 @@ $1(a){var s=$.bp
 s=(s==null?$.bp=A.dH(self.window.flutterConfiguration):s).b
 if(s==null)s=null
 else{s=s.canvasKitBaseUrl
-if(s==null)s=null}return(s==null?"https://www.gstatic.com/flutter-canvaskit/f40e976bedff57e69e1b3d89a7c2a3c617a03dad/":s)+a},
+if(s==null)s=null}return(s==null?"canvaskit/":s)+a},
 $S:113}
 A.a1n.prototype={
 $1(a){this.a.remove()
@@ -56069,7 +56069,7 @@ r=A.mB(n,A.a3(n).c)}else r=A.al(t.S)
 n=t.F
 return A.xI(A.a6o(A.a([A.a31(new A.d7(B.cX,new A.r5(q.a.c,new A.QM(b),p),p)),A.a31(A.BL(A.a([A.ka(A.a4m(B.Dq,new A.QN(q,b),p)),A.ka(A.a4m(B.Dr,new A.QO(q,b),p))],n),B.br,B.bu,B.bv)),A.ka(new A.d7(B.y8,A.a31(new A.d7(B.cX,new A.zK(r,l,new A.QP(q),p),p)),p))],n),B.bu),p,p)}}
 A.QH.prototype={
-$0(){var s=null,r=A.a8F(s,s,s,s,s,B.al,s,A.a4l("Build Date : "+A.a6u(A.hj("1706885379099",s),!1).k(0),s),B.iw,B.y4,s,s,s,s,s,s,s,s,s),q=this.a.a6(t.Cu)
+$0(){var s=null,r=A.a8F(s,s,s,s,s,B.al,s,A.a4l("Build Date : "+A.a6u(A.hj("1706885629187",s),!1).k(0),s),B.iw,B.y4,s,s,s,s,s,s,s,s,s),q=this.a.a6(t.Cu)
 q.toString
 q.f.Ja(r)},
 $S:0}

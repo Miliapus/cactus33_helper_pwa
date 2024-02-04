@@ -3,37 +3,37 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"version.json": "f8ef70a3644eec244f04e33ce9f2faa6",
-"index.html": "8613b0de7aaacb9706928fb04e408a95",
-"/": "8613b0de7aaacb9706928fb04e408a95",
-"main.dart.js": "6a95265edf21cb09301188a445726603",
-"flutter.js": "7d69e653079438abfbb24b82a655b0a4",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"icons/cactus33-192.png": "b29199208ebf7543c893a52dc9528b48",
-"manifest.json": "2f471a482602291d89c391a7f219fb11",
-"assets/AssetManifest.json": "99415d62b81760994811d01397a1a716",
-"assets/NOTICES": "5e04fc13c4a86743effc4cd630bd14c1",
-"assets/FontManifest.json": "19302a2441f43c389efd2e5995e48470",
+const RESOURCES = {"assets/AssetManifest.bin": "9eb38eae7552f8a03a78a4d625ccf82d",
 "assets/AssetManifest.bin.json": "84861460371f3c7f61267e7ec413b4f8",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "89ed8f4e49bcdfc0b5bfc9b24591e347",
-"assets/shaders/ink_sparkle.frag": "4096b5150bac93c41cbc9b45276bd90f",
-"assets/AssetManifest.bin": "9eb38eae7552f8a03a78a4d625ccf82d",
-"assets/fonts/NotoSerifSC-Light.subset.otf": "b5a32288b1850e2925b04fd7f9d01f3e",
-"assets/fonts/NotoSerifSC-ExtraLight.subset.otf": "677521b7099c6ef771b2882a4513a74a",
-"assets/fonts/NotoSerifSC-Bold.subset.otf": "d0c35898ea540f17cd6207b88f7eba81",
-"assets/fonts/NotoSerifSC-SemiBold.subset.otf": "dd7280fba7cd6466ca2396342f48bd72",
-"assets/fonts/NotoSerifSC-Medium.subset.otf": "ec4490dcaa6b083502a4a79fa9fdef5c",
-"assets/fonts/NotoSerifSC-Regular.subset.otf": "adcc381cc672693ef65eb03c322ec3ff",
+"assets/AssetManifest.json": "99415d62b81760994811d01397a1a716",
+"assets/data.bin": "018e3d153653e9f959edac4b99bb4768",
+"assets/FontManifest.json": "19302a2441f43c389efd2e5995e48470",
 "assets/fonts/MaterialIcons-Regular.otf": "32fce58e2acb9c420eab0fe7b828b761",
 "assets/fonts/NotoSerifSC-Black.subset.otf": "a1ea7638a702031fafa13ba0ca7196ad",
-"assets/data.bin": "018e3d153653e9f959edac4b99bb4768",
-"canvaskit/skwasm.js": "87063acf45c5e1ab9565dcf06b0c18b8",
-"canvaskit/skwasm.wasm": "2fc47c0a0c3c7af8542b601634fe9674",
-"canvaskit/chromium/canvaskit.js": "0ae8bbcc58155679458a0f7a00f66873",
-"canvaskit/chromium/canvaskit.wasm": "143af6ff368f9cd21c863bfa4274c406",
+"assets/fonts/NotoSerifSC-Bold.subset.otf": "d0c35898ea540f17cd6207b88f7eba81",
+"assets/fonts/NotoSerifSC-ExtraLight.subset.otf": "677521b7099c6ef771b2882a4513a74a",
+"assets/fonts/NotoSerifSC-Light.subset.otf": "b5a32288b1850e2925b04fd7f9d01f3e",
+"assets/fonts/NotoSerifSC-Medium.subset.otf": "ec4490dcaa6b083502a4a79fa9fdef5c",
+"assets/fonts/NotoSerifSC-Regular.subset.otf": "adcc381cc672693ef65eb03c322ec3ff",
+"assets/fonts/NotoSerifSC-SemiBold.subset.otf": "dd7280fba7cd6466ca2396342f48bd72",
+"assets/NOTICES": "2ff7ff237c3907763389951c7b4e3074",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "89ed8f4e49bcdfc0b5bfc9b24591e347",
+"assets/shaders/ink_sparkle.frag": "4096b5150bac93c41cbc9b45276bd90f",
 "canvaskit/canvaskit.js": "eb8797020acdbdf96a12fb0405582c1b",
 "canvaskit/canvaskit.wasm": "73584c1a3367e3eaf757647a8f5c5989",
-"canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03"};
+"canvaskit/chromium/canvaskit.js": "0ae8bbcc58155679458a0f7a00f66873",
+"canvaskit/chromium/canvaskit.wasm": "143af6ff368f9cd21c863bfa4274c406",
+"canvaskit/skwasm.js": "87063acf45c5e1ab9565dcf06b0c18b8",
+"canvaskit/skwasm.wasm": "2fc47c0a0c3c7af8542b601634fe9674",
+"canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03",
+"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"flutter.js": "59a12ab9d00ae8f8096fffc417b6e84f",
+"icons/cactus33-192.png": "b29199208ebf7543c893a52dc9528b48",
+"index.html": "c559ba6dfcbc2e8d7b5b3a6909892319",
+"/": "c559ba6dfcbc2e8d7b5b3a6909892319",
+"main.dart.js": "893a19cad6a12183f4a2ffc6cc2bcb8b",
+"manifest.json": "41b54bcd688690557fb48123322181ee",
+"version.json": "f8ef70a3644eec244f04e33ce9f2faa6"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
@@ -128,8 +128,7 @@ self.addEventListener("fetch", (event) => {
   }
   // If the URL is not the RESOURCE list then return to signal that the
   // browser should take over.
-  var resKey = key.replace("cactus33_helper_pwa/", "");
-if (!RESOURCES[resKey]) {
+  if (!RESOURCES[key]) {
     return;
   }
   // If the URL is the index.html, perform an online-first request.

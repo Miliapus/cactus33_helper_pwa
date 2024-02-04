@@ -86,7 +86,7 @@ class MyHomePageState extends State<MyHomePage> {
     const clearStyle = TextStyle(
       fontSize: 20,
     );
-    return Center(
+    return SafeArea(child:  Center(
       child: Column(
         children: [
           Card(
@@ -146,6 +146,6 @@ class MyHomePageState extends State<MyHomePage> {
           )
         ],
       ),
-    );
+    ),);
   }
 }
